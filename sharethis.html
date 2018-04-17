@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Assignment !!1</title>
+	<style type="text/css">
+		button {
+			padding: 20px;
+			background-color: red;
+			color: white;
+			border-radius: 9px;
+			border: 1px solid pink;
+			font-size: 36px;
+			position: absolute;
+
+		}
+
+	</style>
+</head>
+
+	
+<body>
+	<h1>Hover 10 times, then click button to open Kissanime :)</h1>
+
+	<button id="my-button">Touch me ;} </button>
+
+
+	<script type="text/javascript">
+		
+
+		function randomColor(){
+			const r = Math.floor(Math.random() * 255);
+			const g = Math.floor(Math.random() * 255);
+			const b = Math.floor(Math.random() * 255);
+			return 'rgb(' + r + ',' + g + ',' + b + ')'
+		}
+		const button = document.getElementById('my-button');
+
+		const w = window.innerWidth;
+		const h = window.innerHeight;
+
+		let hoverCount = 0;
+
+		button.onmouseover = function(){
+			if(hoverCount < 10){
+			button.style.backgroundColor = randomColor();
+			button.style.left = Math.random() * w + 'px';
+			button.style.top = Math.random() * h + 'px';
+			hoverCount = hoverCount + 1;
+		}
+			
+
+
+			console.log(hoverCount);
+			}
+		
+		
+		button.onclick = function(){
+			window.open("https://kissanime.ac");
+		}
+
+	</script>
+
+
+</body>
+</html>
